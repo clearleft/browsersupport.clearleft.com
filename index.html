@@ -133,30 +133,28 @@
     
     <h2>Features, not browsers</h2>
     
-    <p>We don’t base our browser support on specific browser names and numbers. Instead, our support policy is based on the capabilities of those browsers—web standards.</p>
+    <p>We don’t base our browser support on specific browser names and numbers. Instead, our support policy is based on the capabilities of those browsers.</p>
 
-    <p>The <a href="https://web.dev/baseline">Baseline</a> initiative is a joint effort by Google, Microsoft, Apple, and Mozilla to categorise new features into two categories:</p>
+    <p>The <a href="https://web.dev/baseline">Baseline</a> is a joint effort by Google, Microsoft, Apple, and Mozilla to categorise browser support for web standards. Baseline provides clear information about which web standards features are ready to use in websites. It designates new features into two categories:</p>
 
     <ol>
-      <li>Newly available</li>
-      <li>Widely available</li>
+		<li><strong>Newly available</strong> – a feature is supported by the latest versions of all core browsers</li>
+      <li><strong>Widely available</strong> – a feature has been supported across browsers for at least 30 months</li>
     </ol>
 
-    <p>We use the Baseline project to determine which browser features to use in production.</p>
-
-    <p>If a feature is widely available according to Baseline, we can use it.</p>
+    <p>We use the Baseline project to determine which browser features to use in production. If a feature is <strong>widely available</strong> according to Baseline, we can use it.</p>
 
     <article>
 
       <h3>Progressive enhancement</h3>
 
-      <p>If a feature is newly available, we ask a follow-up question:</p>
+      <p>If a feature is <strong>newly available</strong>, we might still use it, but we’ll ask a follow-up question:</p>
 
       <blockquote>Can this feature be used as a progressive enhancement?</blockquote>
 
-      <p>In other words, will using this feature harm browsers that don’t support it? If a newly-available feature can be used as a progressive enhancement, we might use it.</p>
+      <p>In other words, will using this feature harm browsers that don’t support it? If a newly-available feature can be used as a progressive enhancement, we could use it. If not, we’ll wait until the feature becomes widely available and choose a different approach in the meantime.</p>
 
-      <p>This restricts usage to nice-to-have additions rather than mission-critical requirements. But it means we don’t necessarily have to wait for every browser to support a feature before using it.</p>
+      <p>This approach restricts usage of new features to nice-to-have additions rather than mission-critical requirements. But it means we don’t necessarily have to wait for every browser to support a feature before using it.</p>
     
     </article>
 
@@ -170,9 +168,9 @@
 
         <h4>Support</h4>
 
-        <p>When we say we support every browser, we mean that the core content of a website should be available to any browser. That doesn’t mean the content will look exactly the same in every browser.</p>
+        <p>When we say we support every browser, we mean that the core content and functionality of a website should be available to any browser. That doesn’t mean the content will look exactly the same in every browser.</p>
         
-        <p>It also doesn’t mean that every interaction will be available to every browser—some interactions may be implemented as progressive enhancements only available to newer browsers. That’s okay as long as the interaction isn’t part of the core functionality of the website.</p>
+        <p>It also doesn’t mean that every interaction will be identical or available to every browser. Some interactions may be implemented as progressive enhancements only available to newer browsers, provided the interaction isn’t part of the core functionality of the website.</p>
           
       </section>
 
@@ -180,7 +178,7 @@
 
         <h4>Optimisation</h4>
 
-        <p>Optimising for specific browsers is wasted effort. If a browser doesn’t yet support a specific feature, it almost certainly will in the future. Time is better spent ensuring that features are deployed using a progressive enhancement so that lack of support isn’t a blocker.</p>
+        <p>If a browser doesn’t yet support a specific feature, it almost certainly will in the future. Therefore rather than optimising for specific browsers, we’ll spend time ensuring that features are deployed as progressive enhancements so that lack of support isn’t a blocker.</p>
 
         <p>We try to avoid using polyfills, hacks and workarounds that would need to be removed at a later stage.</p>
           
@@ -193,19 +191,13 @@
     <p>Underlying our browser support policy are two foundational principles:</p>
 
     <ol>
-      <li>Website content should be accessible to everyone.</li>
+      <li>Website content and core functionality should be accessible to everyone.</li>
       <li>It’s okay for websites to look different in different browsers.</li>
     </ol>
 
     <p>If content is unreadable in some browsers, that’s a bug that we will fix.</p>
 
-    <p>If content is displayed slightly differently in some browsers, that’s not a bug.</p>
-
-    <p>Attempting to put every pixel in exactly the same place on every browser on every platform isn’t a sensible goal.</p>
-
-    <p>Making sure your website is available to everyone, regardless of what browser or platform they use, is a very sensible goal.</p>
-
-    <p>If this means that there will sometimes be subtle visual and functional differences from browser to browser, that’s okay.</p>
+    <p>If content is displayed slightly differently in some browsers, we consider that to be a facet of the web, not a bug. This means that there will sometimes be subtle visual and functional differences from browser to browser. We deem this acceptable provided content and core functionality are unaffected.</p>
 
   </main>
 
